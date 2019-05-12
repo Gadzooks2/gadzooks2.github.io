@@ -1,3 +1,5 @@
+var input = document.createElement('input');
+var input_box = document.body.appendChild(input);
 input_box.setAttribute("type", "text");
 input_box.setAttribute("id", "numberOfAIs");
 input_box.setAttribute("onchange", "setAIs();");
