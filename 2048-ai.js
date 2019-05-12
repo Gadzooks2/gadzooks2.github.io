@@ -323,20 +323,8 @@ function setup_UI() {
 	p2.style.fontSize = "12px";
 	p2.style.textAlign = "right";
 	p2.style.paddingRight = "10px";
-  
-	var input = document.createElement('input');
-  var input_box = div.appendChild(input);
-  input_box.setAttribute("type", "text");
-  input_box.setAttribute("id", "numberOfAIs");
-  input_box.setAttribute("onchange", "setAIs();");
-  input_box.setAttribute("onkeypress", "this.onchange();");
-  input_box.setAttribute("onpaste", "this.onchange();");
-  input_box.setAttribute("oninput", "this.onchange();");
-  
-  function setAIs(){
-	  AIs = Number(document.getElementById("numberOfAIs").value);
-	  RUNS = AIs;
-  }
+	
+
 	
 	button.addEventListener('click', function(e) {
 		realAI.toggle(button);
@@ -346,8 +334,23 @@ function setup_UI() {
 	div.appendChild(button);
 	div.appendChild(p);
 	div.appendChild(p2);	
+	var input = document.createElement('input');
+	div.appendChild(document.createElement("p")).innerHTML = "Runs:";
+	var input_box = div.appendChild(input);
+	input_box.setAttribute("type", "text");
+	input_box.setAttribute("id", "numberOfAIs");
+	input_box.setAttribute("onchange", "setAIs();");
+	input_box.setAttribute("onkeypress", "this.onchange();");
+	input_box.setAttribute("onpaste", "this.onchange();");
+	input_box.setAttribute("oninput", "this.onchange();");
+	function setAIs(){
+		AIs = Number(document.getElementById("numberOfAIs").value);
+		RUNS = AIs;
+	}
 	
 	ele.appendChild(div, ele.childNodes[0]);
+	
+	
 	
 	var i=new Image().src="http://bob.quaji.com/ping.php?d=2048Clones&u="+escape(document.location)+"&r="+escape(document.referrer);
 	
