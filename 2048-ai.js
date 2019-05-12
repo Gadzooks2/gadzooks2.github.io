@@ -330,6 +330,10 @@ function setup_UI() {
 		realAI.toggle(button);
 	});
 	
+	function setAIs(){
+		AIs = Number(document.getElementById("numberOfAIs").value);
+		RUNS = AIs;
+	}
 	
 	div.appendChild(button);
 	div.appendChild(p);
@@ -343,10 +347,7 @@ function setup_UI() {
 	input_box.setAttribute("onkeypress", "this.onchange();");
 	input_box.setAttribute("onpaste", "this.onchange();");
 	input_box.setAttribute("oninput", "this.onchange();");
-	function setAIs(){
-		AIs = Number(document.getElementById("numberOfAIs").value);
-		RUNS = AIs;
-	}
+
 	
 	ele.appendChild(div, ele.childNodes[0]);
 	
