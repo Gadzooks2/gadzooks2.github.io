@@ -330,10 +330,7 @@ function setup_UI() {
 		realAI.toggle(button);
 	});
 	
-	function setAIs(){
-		AIs = Number(document.getElementById("numberOfAIs").value);
-		RUNS = AIs;
-	}
+	setAIs = function(){AIs = Number(document.getElementById("numberOfAIs").value); RUNS = AIs;}
 	
 	div.appendChild(button);
 	div.appendChild(p);
